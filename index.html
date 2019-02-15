@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="refresh" content="20;URL=https://lounge.dmm.com/">
   <title>Synapse（シナプス） - オンラインサロン・プラットフォーム</title>
   <style>
@@ -10,35 +11,71 @@
       padding: 0;
       box-sizing: border-box;
     }
-    html {
-      width: 100%;
+    html, body, .container {
       height: 100%;
       background: #32bea6;
-    }
-    body {
-      width: 80%;
-      height: 100%;
-      margin: 0 auto;
-      padding: 0 16px;
-      background: #ffffff;
       overscroll-behavior: none;
     }
     .container {
+      width: 80%;
+      height: auto;
+      min-height: 100%;
+      margin: 0 auto;
+      padding: 16px;
+      background: #ffffff;
+    }
+    h1 {
+      padding: 16px;
+      text-align: center;
+      font-size: 3.75vw;
+    }
+    p {
+      margin: 16px 0;
+      text-indent: 16px;
+    }
+    .thankyou_synapse_wrapper {
       width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
     .thankyou_synapse {
-      max-width: 90%;
-      max-height: 90%;
+      width: 100%;
+      padding-top: 75%;
+      background: url("./thankyou_synapse.png") 0 0 no-repeat;
+      background-size: contain;
+    }
+    @media(min-width: 644px) {
+      p, aside {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .thankyou_synapse_wrapper {
+        width: 484px;
+        margin: 0 auto;
+      }
+    }
+    @media(min-width: 800px) {
+      h1 {
+        font-size: 30px;
+      }
+    }
+    @media(max-width: 640px) {
+      h1 {
+        font-size: 24px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img class="thankyou_synapse" src="thankyou_synapse.png" alt="see you again">
+    <main>
+      <h1>「Synapse」サービス終了のお知らせ</h1>
+      <p>平素より「Synapse」にてオンラインサロン・プラットフォームをご利用いただき、誠にありがとうございました。</p>
+      <p>このたび「Synapse」は、 2019年2月28日（木）15:00 を以て、サービスを終了させていただきます。長年にわたりご愛顧いただきましたお客様に、心より感謝申し上げます。</p>
+    </main>
+    <aside>このページは20秒後に、<a href="https://lounge.dmm.com/">DMM オンラインサロン</a>にリダイレクトします。</aside>
+    <div class="thankyou_synapse_wrapper">
+      <div class="thankyou_synapse"></div>
+    </div>
   </div>
   <script src="https://unpkg.com/konami@1.6.2/konami.js"></script>
   <script>
@@ -47,7 +84,7 @@
       var urls = [
         'https://themint.jp/',
         'https://www.facebook.com/tamuken',
-        'https://twitter.com/tamuken',        
+        'https://twitter.com/tamuken',
       ];
       var url = urls[Math.floor(Math.random() * urls.length)];
       location.href = url;
