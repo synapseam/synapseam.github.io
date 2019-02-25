@@ -100,6 +100,9 @@
   <script src="https://unpkg.com/konami@1.6.2/konami.js"></script>
   <script>
     'use strict';
+    if (location.href !== 'https://synapseam.github.io/') {
+      location.replace('https://synapseam.github.io/');
+    }
     var konami = new Konami(function () {
       var urls = [
         'https://themint.jp/',
