@@ -25,6 +25,7 @@
   <link rel="icon" type="image/vnd.microsoft.icon" href="icons/favicon--48x48.ico" sizes="48x48">
   <link rel="icon" type="image/vnd.microsoft.icon" href="icons/favicon--64x64.ico" sizes="64x64">
   <link rel="icon" type="image/vnd.microsoft.icon" href="icons/favicon--128x128.ico" sizes="128x128">
+  <link rel="canonical" href="https://synapseam.github.io/" id="canonical">
   <style>
     * {
       margin: 0;
@@ -102,6 +103,11 @@
     'use strict';
     if (location.href !== 'https://synapseam.github.io/') {
       location.replace('https://synapseam.github.io/');
+    } else {
+      var element = document.getElementById('canonical');
+      if (element) {
+        element.parentNode.removeChild(element);
+      }
     }
     var konami = new Konami(function () {
       var urls = [
