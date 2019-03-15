@@ -1,4 +1,3 @@
 # synapseam.github.io
 
-Synapse 閉鎖後にしばらく表示しておくためのページ  
-`synapse.am` のドメインを使用する予定
+かつてそこには **Synapse** (https://synapse.am) という，オンラインサロン事業を手がけるスタートアップ企業がありました。
